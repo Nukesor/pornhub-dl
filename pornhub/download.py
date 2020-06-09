@@ -81,6 +81,8 @@ def download_video(viewkey, name="single_videos"):
         "retries": 3,
         "nooverwrites": False,
         "continuedl": True,
+        # 'proxy': 'socks5://127.0.0.1:1086', # Uncomment this if you want to use proxy
+        # "external_downloader": "aria2c", # Uncomment this if you know how to use aria2
     }
     if is_premium:
         options["cookiefile"] = "cookie_file"
