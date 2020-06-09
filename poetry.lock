@@ -208,7 +208,7 @@ description = "YouTube video downloader"
 name = "youtube-dl"
 optional = false
 python-versions = "*"
-version = "2020.3.24"
+version = "2020.6.6"
 
 [metadata]
 content-hash = "e0083d83a4c1982e0267200b18c53baa632ebdd5929d95d27883fa42b024b53b"
