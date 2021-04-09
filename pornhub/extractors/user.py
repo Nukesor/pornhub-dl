@@ -158,7 +158,7 @@ def get_user_video_viewkeys(user):
         hasNavigation = True
     # Others have a button for "endless scrolling"
     # In that case we have to search as long as
-    elif soup.find(id="moreDataBtnStream"):
+    elif soup.find(id="moreDataBtn"):
         hasEndlessScrolling = True
 
     keys = []
@@ -167,7 +167,7 @@ def get_user_video_viewkeys(user):
     while current_page <= pages:
         # Check if the next site has another "endless scrolling" button as qell
         # If that's the case, increase the counter
-        if hasEndlessScrolling and soup.find(id="moreDataBtnStream"):
+        if hasEndlessScrolling and soup.find(id="moreDataBtn"):
             pages += 1
 
         logger.info(f"Crawling {next_url}")
@@ -227,7 +227,7 @@ def get_video_upload_viewkeys(user, public=False):
         hasNavigation = True
     # Others have a button for "endless scrolling"
     # In that case we have to search as long as
-    elif soup.find(id="moreDataBtnStream"):
+    elif soup.find(id="moreDataBtn"):
         hasEndlessScrolling = True
 
     keys = []
@@ -236,7 +236,7 @@ def get_video_upload_viewkeys(user, public=False):
     while current_page <= pages:
         # Check if the next site has another "endless scrolling" button as qell
         # If that's the case, increase the counter
-        if hasEndlessScrolling and soup.find(id="moreDataBtnStream"):
+        if hasEndlessScrolling and soup.find(id="moreDataBtn"):
             pages += 1
 
         logger.info(f"Crawling {next_url}")
